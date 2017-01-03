@@ -1,80 +1,85 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="assets/css/user.css">
+	<script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</head>
 
-<div class="off-canvas-wrapper">
-<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
-<div class="off-canvas position-left reveal-for-large" id="my-info" data-off-canvas data-position="left">
-<div class="row column">
-<br>
-<img class="thumbnail" src="http://placehold.it/550x350">
-<h5>Mike Mikerson</h5>
-<p>Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo.</p>
-</div>
-</div>
-<div class="off-canvas-content" data-off-canvas-content>
-<div class="title-bar hide-for-large">
-<div class="title-bar-left">
-<button class="menu-icon" type="button" data-open="my-info"></button>
-<span class="title-bar-title">Mike Mikerson</span>
-</div>
-</div>
-<div class="callout primary">
-<div class="row column">
-<h1>Hello! This is the portfolio of a very witty person.</h1>
-<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla.</p>
-</div>
-</div>
-<div class="row small-up-2 medium-up-3 large-up-4">
-<div class="column">
-<img class="thumbnail" src="http://placehold.it/550x550">
-<h5>My Site</h5>
-</div>
-<div class="column">
-<img class="thumbnail" src="http://placehold.it/550x550">
-<h5>My Site</h5>
-</div>
-<div class="column">
-<img class="thumbnail" src="http://placehold.it/550x550">
-<h5>My Site</h5>
-</div>
-<div class="column">
-<img class="thumbnail" src="http://placehold.it/550x550">
-<h5>My Site</h5>
-</div>
-<div class="column">
-<img class="thumbnail" src="http://placehold.it/550x550">
-<h5>My Site</h5>
-</div>
-<div class="column">
-<img class="thumbnail" src="http://placehold.it/550x550">
-<h5>My Site</h5>
-</div>
-<div class="column">
-<img class="thumbnail" src="http://placehold.it/550x550">
-<h5>My Site</h5>
-</div>
-<div class="column">
-<img class="thumbnail" src="http://placehold.it/550x550">
-<h5>My Site</h5>
-</div>
-<div class="column">
-<img class="thumbnail" src="http://placehold.it/550x550">
-<h5>My Site</h5>
-</div>
-<div class="column">
-<img class="thumbnail" src="http://placehold.it/550x550">
-<h5>My Site</h5>
-</div>
-<div class="column">
-<img class="thumbnail" src="http://placehold.it/550x550">
-<h5>My Site</h5>
-</div>
-<div class="column">
-<img class="thumbnail" src="http://placehold.it/550x550">
-<h5>My Site</h5>
-</div>
-</div>
-<hr>
-<div class="row">
-<div class="medium-6 columns">
+<body>
+    <nav class="navbar navbar-default custom-header">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button><a class="navbar-brand navbar-link" href="#">Nombre<span>sitio </span> </a></div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#"> <span class="caret"></span><img src="assets/img/avatar.jpg" class="dropdown-image"></a>
+                        <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                            <li><a href="#">Configuración </a></li>
+                            <li class="active"><a href="#">Salir </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+	<div>
+		<ul class="bar">
+			<li><a class="active" href="#home">Página Principal</a></li>
+			<button class="accordion">Tutoriales</button>
+			<div class="panel">
+				<button class="accordion">Unidad 1</button>
+				<div class="panel">
+					<li><a href="#tutorial1-1">Contenido 1</a></li>
+					<li><a href="#tutorial1-2">Contenido 2</a></li>
+					<li><a href="#tutorial1-3">Contenido 3</a></li>
+				</div>
+				<button class="accordion">Unidad 2</button>
+				<div class="panel">
+					<li><a href="#tutorial2-1">Contenido 1</a></li>
+					<li><a href="#tutorial2-2">Contenido 2</a></li>
+					<li><a href="#tutorial2-3">Contenido 3</a></li>
+				</div>
+				<button class="accordion">Unidad 3</button>
+				<div class="panel">
+					<li><a href="#tutorial3-1">Contenido 1</a></li>
+					<li><a href="#tutorial3-2">Contenido 2</a></li>
+					<li><a href="#tutorial3-3">Contenido 3</a></li>
+				</div>
+			</div>
+			<button class="accordion">Simuladores</button>
+			<div class="panel">
+				<li><a href="#sim1">Modelo Unificado</a></li>
+				<li><a href="#sim2">Modelo Fuzzy EER</a></li>
+			</div>
+		</ul>
+	</div>
+	<div style="margin-left:20%;margin-top:60px;padding:1px 16px;height:1000px;">
+		<h2>Test</h2>
+	</div>
+	<script>
+	var acc = document.getElementsByClassName("accordion");
+	var i;
 
-<a ng-click="logout()">logout</a>
+	for (i = 0; i < acc.length; i++) {
+		acc[i].onclick = function(){
+			this.classList.toggle("active");
+			this.nextElementSibling.classList.toggle("show");
+	  }
+	}
+	</script>
+</body>
+
+</html>
