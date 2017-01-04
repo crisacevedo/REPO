@@ -34,7 +34,7 @@ app.controller("LoginController", function($scope, $http, $state){
         $http.post("endpoints/signup.php", data).success(function(response){
             console.log(response);
             localStorage.setItem("token", JSON.stringify(response));
-            $state.go("application");
+            $state.go("login");
         }).error(function(error){
             console.error(error);
         });
