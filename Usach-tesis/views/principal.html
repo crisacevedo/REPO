@@ -49,13 +49,36 @@
 			</div>
 			<button class="accordion">Simuladores</button>
 			<div class="panel">
-				<li><a href="#sim1">Modelo Unificado</a></li>
+				<li><a href="#simulador">Modelo Unificado</a></li>
 				<li><a href="#sim2">Modelo Fuzzy EER</a></li>
 			</div>
 		</ul>
 	</div>
 	<div style="margin-left:20%;margin-top:60px;padding:1px 16px;height:1000px;">
 		<h2>Test</h2>
+	
+
+
+<script>
+// Append all the named children to the form and then submit it
+// Assumes the class of any input used by the form is the same as the form id
+function submitMyForm( form_id )
+{
+    var form = document.getElementById( form_id );
+    var form_elements = document.getElementsByClassName( form_id );
+    var i;
+    for (i = 0; i < form_elements.length; i++) {
+        form.appendChild( form_elements[i] );                   
+    }
+    form.submit();
+}   
+</script>
+
+
+
+
+
+
 	</div>
 	<script>
 	var acc = document.getElementsByClassName("accordion");

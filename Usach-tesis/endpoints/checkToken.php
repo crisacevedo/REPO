@@ -4,6 +4,7 @@
 	$token = $data->token;
 
 	$check = $db->query("SELECT * FROM users WHERE token=$token");
+	
 	$check = $check->fetchAll();
 
 	if (count($check) == 1){

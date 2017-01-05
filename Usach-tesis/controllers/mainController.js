@@ -21,6 +21,6 @@ app.controller("MainController", function ($scope, $state, $http, Authentication
 			console.error(error);
 		})
 	}
-	
-    
+
+	 
 })

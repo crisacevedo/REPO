@@ -21,4 +21,21 @@ app.config(function($stateProvider, $urlRouterProvider){
         templateUrl: "views/principal.html",
         params: {'test': null}
         })
+
+    .state("simulador", {
+        url:"/simulador",
+        controller: "Simulador",
+        controller: "MainController",
+        templateUrl: "views/simulador.html",
+        params: {'test': null}
+        })
+
+
+
+
+
+
+
+
 })
+
