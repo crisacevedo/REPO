@@ -29,7 +29,9 @@ SET time_zone = "+00:00";
 CREATE TABLE `users` (
   `userId` int(11) NOT NULL,
   `email` text NOT NULL,
-  `password` text NOT NULL
+  `password` text NOT NULL,
+  `token` text NOT NULL
+
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
