@@ -25,6 +25,7 @@ app.config(function($stateProvider, $urlRouterProvider){
     .state("simulador", {
         url:"/simulador",
         controller: "LoginController",
+        controller: "MainController",
         templateUrl: "views/simulador.html",
         params: {'test': null}
         })
