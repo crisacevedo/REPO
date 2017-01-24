@@ -29,6 +29,12 @@ app.config(function($stateProvider, $urlRouterProvider){
         params: {'test': null}
         })
 
+    .state("cambioclave", {
+        url:"/cambioclave",
+        controller: "LoginController",
+        templateUrl: "views/cambioclave.html",
+        params: {'test': null}
+        })
 
 
 
