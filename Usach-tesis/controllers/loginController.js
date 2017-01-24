@@ -3,22 +3,14 @@ app.controller("LoginController", function($scope, $http, $state,AuthenticationS
     //Variables
     $scope.signUpInfo = {
         username: undefined,
-        password: undefined,
-        nombre: undefined,
-        telefono: undefined
-        }
+        password: undefined
+    }
     
     $scope.loginInfo = {
         username: undefined,
         password: undefined
     }
     
-    $scope.ModificarPassword = {
-        passwordvieja: undefined,
-        passwordnueva: undefined
-    }
-
-
     var result = {
         test: undefined
     }
@@ -36,10 +28,8 @@ app.controller("LoginController", function($scope, $http, $state,AuthenticationS
     $scope.signUserUp = function (){
         var data = {
             username: $scope.signUpInfo.username,
-            password: $scope.signUpInfo.password,
-             nombre: $scope.signUpInfo.nombre,
-             telefono: $scope.signUpInfo.telefono
-             }
+            password: $scope.signUpInfo.password
+        }
         
       
 
@@ -56,7 +46,6 @@ app.controller("LoginController", function($scope, $http, $state,AuthenticationS
          var data = {
             username: $scope.loginInfo.username,
             password: $scope.loginInfo.password
-                
         }
         
         $http.post("endpoints/login.php", data).success(function(response){
@@ -69,23 +58,12 @@ app.controller("LoginController", function($scope, $http, $state,AuthenticationS
     
     }
     
-    $scope.ModificarPassword = function () {
-         var data = {
-            passwordvieja: $scope.ModificarPassword.passwordvieja,
-            passwordnueva: $scope.ModificarPassword.passwordnueva
-                
-        }
-        
-        $http.post("endpoints/modificarclave.php", data).success(function(response){
-            console.log(response);
-            localStorage.setItem("token", JSON.stringify(response));
-            $state.go("application", result);
-        }).error(function(error){
-            console.error(error);
-        });
+
     
-    }
-    
+
+
+
+
     //Init
 
 })
