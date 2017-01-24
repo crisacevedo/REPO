@@ -7,6 +7,8 @@
     $data = json_decode(file_get_contents("php://input"));
     $username = $data->username;
     $password = $data->password;
+    $nombre = $data->nombre;
+    $telefono = $data->telefono;
     
     $userInfo = $db->query("SELECT * FROM users WHERE email='$username'");
     $userInfo = $userInfo->fetchAll();
@@ -22,11 +24,14 @@
     
     
 
-    $q = "INSERT INTO users (email, password) VALUES (:email, :password)";
+    $q = "INSERT INTO users (email, password,nombre,telefono) VALUES (:email, :password,:nombre,:telefono)";
     $query = $db->prepare($q);
     $execute = $query->execute(array(
         ":email" => $username,
-        ":password" => sha1($password)
+        ":password" => sha1($password),
+        ":nombre" => $nombre,
+        ":telefono" => $telefono
+    
     ));
 
         $mail = new PHPMailer(); // create a new object
