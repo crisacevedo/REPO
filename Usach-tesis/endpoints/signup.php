@@ -4,12 +4,19 @@
     require("../class.smtp.php");
 
 
+
     $data = json_decode(file_get_contents("php://input"));
     $username = $data->username;
     $password = $data->password;
     $nombre = $data->nombre;
     $telefono = $data->telefono;
-    
+
+
+
+
+
+
+  
     $userInfo = $db->query("SELECT * FROM users WHERE email='$username'");
     $userInfo = $userInfo->fetchAll();
 
