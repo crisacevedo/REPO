@@ -22,25 +22,53 @@ app.config(function($stateProvider, $urlRouterProvider){
         params: {'test': null}
         })
 
-    .state("simulador", {
-        url:"/simulador",
-        controller: "Simulador1Controller",
-        templateUrl: "views/simulador.html",
-        params: {'test': null}
-        })
+		.state("simulador", {
+		url:"/simulador",
+		controller: "Simulador1Controller",
+		templateUrl: "views/simulador.html",
+		params: {'test': null}
+		})
 
-    
-    .state("cambioclave", {
-        url:"/cambioclave",
-        controller: "MainController",
-        templateUrl: "views/cambioclave.html",
-        params: {'test': null}
-        })
+		.state("cambioclave", {
+		url:"/cambioclave",
+		controller: "MainController",
+		templateUrl: "views/cambioclave.html",
+		params: {'test': null}
+		})
 
+		.state("eer", {
+		url:"/eer",
+		controller: "MainController",
+		templateUrl: "views/eer.html",
+		params: {'test': null}
+		})
 
+		.state("conjuntos", {
+		url:"/conjuntos",
+		controller: "MainController",
+		templateUrl: "views/conjuntos.html",
+		params: {'test': null}
+		})
 
-
-
-
+		.state("logica", {
+		url:"/logica",
+		controller: "MainController",
+		templateUrl: "views/logica.html",
+		params: {'test': null}
+		})
+		
+		.state("modelos", {
+		url:"/modelos",
+		controller: "MainController",
+		templateUrl: "views/modelos.html",
+		params: {'test': null}
+		})
+		
+		.state("unificado", {
+		url:"/unificado",
+		controller: "MainController",
+		templateUrl: "views/unificado.html",
+		params: {'test': null}
+		})
 })
 

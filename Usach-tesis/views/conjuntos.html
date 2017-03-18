@@ -25,13 +25,13 @@
     </nav>
 	<div>
 		<ul class="bar">
-			<li><a class="active" href="#/app">Página Principal</a></li>
+			<li><a href="#/app">Página Principal</a></li>
 			<button class="accordion">Tutoriales</button>
 			<div class="panel">
 				<button class="accordion">Lógica y Conjuntos Difusos</button>
 				<div class="panel">
 					<li><a href="#/logica">Lógica Difusa</a></li>
-					<li><a href="#/conjuntos">Conjuntos Difusos</a></li>
+					<li><a class="active" href="#/conjuntos">Conjuntos Difusos</a></li>
 					<li><a href="#">Contenido 3</a></li>
 				</div>
 				<button class="accordion">Modelos Relacionales Difusos</button>
@@ -55,7 +55,11 @@
 		</ul>
 	</div>
 	<div style="margin-left:20%;margin-top:60px;padding:1px 16px;height:1000px;">
-		<h2>Bienvenido</h2>
+		<h4>Conjuntos Difusos</h4>
+		Son conjuntos que pueden contener elementos de forma parcial, determinado mediante un grado de pertenencia.
+		<br><br>
+		<h4>Grado de Pertenencia</h4>
+		Varía entre los valore enteros 0 y 1, en donde 0 indica que el elemento no pertenece al conjunto y 1 que pertenece completamente.
 	</div>
 	<script>
 	var acc = document.getElementsByClassName("accordion");
