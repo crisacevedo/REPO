@@ -66,3 +66,30 @@ ALTER TABLE `users`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+CREATE TABLE cancion 
+
+(
+CancionId int(11),
+Cancion_nombre	varchar(50),
+path varchar(100)
+)
+
+
+CREATE TABLE categoria 
+(
+ CancionID_categoria int,
+ userID_categoria int(11),
+ categoria_1   decimal (3,2),
+ categoria_2   decimal (3,2),
+ categoria_3   decimal (3,2),
+ categoria_4   decimal (3,2),
+ categoria_5   decimal (3,2),
+ categoria_6   decimal (3,2),
+ categoria_7   decimal (3,2),
+ categoria_8   decimal (3,2),
+ categoria_9   decimal (3,2),
+ categoria_10   decimal (3,2),
+ PRIMARY KEY (CancionID_categoria,userID_categoria)
+ ); 
+
