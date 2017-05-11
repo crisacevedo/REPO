@@ -37,15 +37,6 @@ app.controller("Simulador1Controller", function($scope, $http, $state,Authentica
 
 
 
-
-
-
-      
-
-
-
-
-
       $scope.ObtEva = function (){
       
  var arreglo = 
@@ -57,9 +48,9 @@ app.controller("Simulador1Controller", function($scope, $http, $state,Authentica
         [0,0,0,0,0] , 
         [0,0,0,0,0] , 
         [0,0,0,0,0] , 
-      [0,0,0,0,0] , 
-      [0,0,0,0,0] 
-      ];
+        [0,0,0,0,0] , 
+        [0,0,0,0,0] 
+        ];
          
          arreglo[0][0]= $scope.ObtEvaInfo.ObtEva1elem1;  
          arreglo[0][1]= $scope.ObtEvaInfo.ObtEva1elem2;  
@@ -67,7 +58,7 @@ app.controller("Simulador1Controller", function($scope, $http, $state,Authentica
          arreglo[0][3]= $scope.ObtEvaInfo.ObtEva1elem4;  
          arreglo[0][4]= $scope.ObtEvaInfo.ObtEva1elem5;  
          
-     arreglo[1][0]= $scope.ObtEvaInfo.ObtEva1elem2;  
+         arreglo[1][0]= $scope.ObtEvaInfo.ObtEva1elem2;  
          arreglo[1][1]= $scope.ObtEvaInfo.ObtEva2elem2;  
          arreglo[1][2]= $scope.ObtEvaInfo.ObtEva2elem3;  
          arreglo[1][3]= $scope.ObtEvaInfo.ObtEva2elem4;  
@@ -79,13 +70,13 @@ app.controller("Simulador1Controller", function($scope, $http, $state,Authentica
          arreglo[2][3]= $scope.ObtEvaInfo.ObtEva3elem4;  
          arreglo[2][4]= $scope.ObtEvaInfo.ObtEva3elem5;  
          
-        arreglo[3][0]= $scope.ObtEvaInfo.ObtEva1elem4; 
+         arreglo[3][0]= $scope.ObtEvaInfo.ObtEva1elem4; 
          arreglo[3][1]= $scope.ObtEvaInfo.ObtEva2elem4;  
          arreglo[3][2]= $scope.ObtEvaInfo.ObtEva3elem4;  
          arreglo[3][3]= $scope.ObtEvaInfo.ObtEva4elem4;  
          arreglo[3][4]= $scope.ObtEvaInfo.ObtEva4elem5;  
         
-        arreglo[4][0]= $scope.ObtEvaInfo.ObtEva1elem5; 
+         arreglo[4][0]= $scope.ObtEvaInfo.ObtEva1elem5; 
          arreglo[4][1]= $scope.ObtEvaInfo.ObtEva2elem5;  
          arreglo[4][2]= $scope.ObtEvaInfo.ObtEva3elem5;  
          arreglo[4][3]= $scope.ObtEvaInfo.ObtEva4elem5;  
@@ -163,6 +154,10 @@ app.controller("Simulador1Controller", function($scope, $http, $state,Authentica
   }
    
 
+	
+
+   
+   
 var token;
 	if (localStorage['token']){
     token = JSON.parse(localStorage['token']);
@@ -187,27 +182,28 @@ var token;
 	
 
 
-
-
-
-
-
-
-
-$scope.logout = function(){
+	$scope.simulador = function(){
 		var data = {
-			token: token
+			rock_reg: $scope.ObtEvaInfo.ObtEva1elem2,
+			rock_pop: $scope.ObtEvaInfo.ObtEva1elem3,
+			rock_ska: $scope.ObtEvaInfo.ObtEva1elem4,
+			rock_jazz: $scope.ObtEvaInfo.ObtEva1elem5,
+			reg_pop: $scope.ObtEvaInfo.ObtEva2elem3,
+			reg_ska: $scope.ObtEvaInfo.ObtEva2elem4,
+			reg_jazz: $scope.ObtEvaInfo.ObtEva2elem5,
+			pop_ska: $scope.ObtEvaInfo.ObtEva3elem4,
+			pop_jazz: $scope.ObtEvaInfo.ObtEva3elem5,
+			ska_jazz: $scope.ObtEvaInfo.ObtEva4elem5
 		}
 		
-		$http.post('endpoints/logout.php', data).success(function(response){
+		$http.post('endpoints/simulador.php', data).success(function(response){
 			console.log(response)
-			localStorage.clear();
-			$state.go("login");
+			localStorage.setItem("token", JSON.stringify(response));
+			$state.go("simulador", result);
 		}).error(function(error){
 			console.error(error);
 		})
 	}
-	
 
 
 
