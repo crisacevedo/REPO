@@ -66,3 +66,31 @@ ALTER TABLE `users`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+CREATE TABLE `cancion` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `nombre` text COLLATE utf8_bin NOT NULL,
+ `artista` text COLLATE utf8_bin NOT NULL,
+ `ruta` text COLLATE utf8_bin NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin
+
+CREATE TABLE `categoria` (
+ `idu` int(11) NOT NULL,
+ `idc` int(11) NOT NULL,
+ `animo` float NOT NULL,
+ `rock_reg` float NOT NULL,
+ `rock_pop` float NOT NULL,
+ `rock_ska` float NOT NULL,
+ `rock_jazz` float NOT NULL,
+ `reg_pop` float NOT NULL,
+ `reg_ska` float NOT NULL,
+ `reg_jazz` float NOT NULL,
+ `pop_ska` float NOT NULL,
+ `pop_jazz` float NOT NULL,
+ `ska_jazz` float NOT NULL,
+ PRIMARY KEY (`idu`,`idc`),
+ KEY `idc` (`idc`),
+ CONSTRAINT `categoria_ibfk_1` FOREIGN KEY (`idu`) REFERENCES `users` (`userId`),
+ CONSTRAINT `categoria_ibfk_2` FOREIGN KEY (`idc`) REFERENCES `cancion` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin
