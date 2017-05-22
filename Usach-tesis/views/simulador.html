@@ -23,52 +23,51 @@
             </div>
         </div>
     </nav>
-  <div>
-    
-    <ul class="bar">
-      <li><a class="active" href="#home">Página Principal</a></li>
-      <button class="accordion">Tutoriales</button>
-      <div class="panel">
-        <button class="accordion">Unidad 1</button>
-        <div class="panel">
-          <li><a href="#tutorial1-1">Contenido 1</a></li>
-          <li><a href="#tutorial1-2">Contenido 2</a></li>
-          <li><a href="#tutorial1-3">Contenido 3</a></li>
-        </div>
-        <button class="accordion">Unidad 2</button>
-        <div class="panel">
-          <li><a href="#tutorial2-1">Contenido 1</a></li>
-          <li><a href="#tutorial2-2">Contenido 2</a></li>
-          <li><a href="#tutorial2-3">Contenido 3</a></li>
-        </div>
-        <button class="accordion">Unidad 3</button>
-        <div class="panel">
-          <li><a href="#tutorial3-1">Contenido 1</a></li>
-          <li><a href="#tutorial3-2">Contenido 2</a></li>
-          <li><a href="#tutorial3-3">Contenido 3</a></li>
-        </div>
-      </div>
-      <button class="accordion">Simuladores</button>
-      <div class="panel">
-        <li><a href="#simulador">Modelo Unificado</a></li>
-        <li><a href="#sim2">Modelo Fuzzy EER</a></li>
-      </div>
-    </ul>
-  </div>
-  <div style="margin-left:20%;margin-top:60px;padding:1px 16px;height:1000px;">
+	<div>
+		<ul class="bar">
+			<li><a href="#/app">Página Principal</a></li>
+			<button class="accordion">Tutoriales</button>
+			<div class="panel">
+				<button class="accordion">Lógica y Conjuntos Difusos</button>
+				<div class="panel">
+					<li><a href="#/logica">Lógica Difusa</a></li>
+					<li><a href="#/conjuntos">Conjuntos Difusos</a></li>
+					<li><a href="#">Contenido 3</a></li>
+				</div>
+				<button class="accordion">Modelos Relacionales Difusos</button>
+				<div class="panel">
+					<li><a href="#/modelos">Introducción</a></li>
+					<li><a href="#/unificado">Modelo Unificado</a></li>
+					<li><a href="#">Contenido 3</a></li>
+				</div>
+				<button class="accordion">Modelo Fuzzy EER</button>
+				<div class="panel">
+					<li><a href="#/eer">Introducción</a></li>
+					<li><a href="#">Contenido 2</a></li>
+					<li><a href="#">Contenido 3</a></li>
+				</div>
+			</div>
+			<button class="accordion">Simuladores</button>
+			<div class="panel">
+				<li><a class="active" href="#/simulador">Modelo Unificado</a></li>
+				<li><a href="#">Modelo Fuzzy EER</a></li>
+			</div>
+		</ul>
+	</div>
+	<div style="margin-left:20%;margin-top:60px;padding:1px 16px;height:1000px;">
     
  
 
 
 
-<div  style="text-align: justify; width:600px;">
+	<div  style="text-align: justify; width:600px;">
 
 
 
- <center>   <h2>Simulador Relaciones de Similitud</h2> </center>
+	<center>   <h2>Simulador Relaciones de Similitud</h2> </center>
  
 
- <center>   <h3>Ejemplo en que se basa el Simulador. </h3> </center>
+	<center>   <h3>Ejemplo en que se basa el Simulador. </h3> </center>
  
 
 
@@ -242,6 +241,31 @@ De acuerdo a esta tabla, es como se asignan los valores.
 
 </table>
 
+
+<center>
+
+<audio id="player" controls="controls">
+  <source id="sourceOgg" src="" type="audio/ogg" />
+  <source id="sourceMp3" src="" type="audio/mp3" />
+  Your browser does not support the audio element.
+</audio>
+
+<p>
+    <button ng-click="loadsong(1)"> Track 1 </button>
+</p>
+
+
+<p>
+    <button ng-click="loadsong(2)"> Track 2 </button>
+</p>
+
+
+</center>
+
+
+
+
+
 <button type="submit" class="width-35  btn btn-sm btn-primary" ng-click="ObtEva()"    <i class="ace-icon fa fa-key"></i > Evaluar </button>
 
 
@@ -382,6 +406,10 @@ $(document).ready(function(){
         $(".copyMediez").val($(this).val());
     });
 });
+
+
+
+
 
 
 

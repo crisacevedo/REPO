@@ -3,9 +3,7 @@ app.controller("LoginController", function($scope, $http, $state,AuthenticationS
     //Variables
    $scope.signUpInfo = {
         username: undefined,
-        password: undefined,
-        nombre: undefined,
-        telefono: undefined
+        password: undefined
         }
     
     $scope.loginInfo = {
@@ -15,34 +13,13 @@ app.controller("LoginController", function($scope, $http, $state,AuthenticationS
     
 
 
-    $scope.ModificarPassword = {
-        passwordvieja: undefined,
-        passwordnueva: undefined
-    }
-
-
-
-    
-    var result = {
-        test: undefined
-    }
-    
-    result.test = {
-        test: "test",
-        test2: "test2",
-        test3: "testers"
-    }
-    
-    result.test = JSON.stringify(result.test);
     
     //Functions
     
     $scope.signUserUp = function (){
         var data = {
             username: $scope.signUpInfo.username,
-            password: $scope.signUpInfo.password,
-              nombre: $scope.signUpInfo.nombre,
-             telefono: $scope.signUpInfo.telefono
+            password: $scope.signUpInfo.password
         }
         
       
@@ -56,6 +33,7 @@ app.controller("LoginController", function($scope, $http, $state,AuthenticationS
         });
     };
     
+
     $scope.loginUser = function () {
          var data = {
             username: $scope.loginInfo.username,
@@ -65,7 +43,10 @@ app.controller("LoginController", function($scope, $http, $state,AuthenticationS
         $http.post("endpoints/login.php", data).success(function(response){
             console.log(response);
             localStorage.setItem("token", JSON.stringify(response));
-            $state.go("application", result);
+            localStorage.setItem("username", JSON.stringify($scope.loginInfo.username));
+          
+            
+            $state.go("application");
         }).error(function(error){
             console.error(error);
         });

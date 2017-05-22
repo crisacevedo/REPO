@@ -1,0 +1,71 @@
+
+
+    <nav class="navbar navbar-default custom-header">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button><a class="navbar-brand navbar-link" href="#">Nombre<span>sitio </span> </a></div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#"> <span class="caret"></span><img src="css/assets/img/avatar.jpg"class="dropdown-image"></a>
+                        <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                            <li><a href="#/cambioclave">Configuración </a></li>
+                            <li class="active"><a <a ng-click="logout()">logout</a> </a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+	<div>
+		<ul class="bar">
+			<li><a href="#/app">Página Principal</a></li>
+			<button class="accordion">Tutoriales</button>
+			<div class="panel">
+				<button class="accordion">Lógica y Conjuntos Difusos</button>
+				<div class="panel">
+					<li><a href="#/logica">Lógica Difusa</a></li>
+					<li><a href="#/conjuntos">Conjuntos Difusos</a></li>
+					<li><a href="#">Contenido 3</a></li>
+				</div>
+				<button class="accordion">Modelos Relacionales Difusos</button>
+				<div class="panel">
+					<li><a href="#/modelos">Introducción</a></li>
+					<li><a href="#/unificado">Modelo Unificado</a></li>
+					<li><a href="#">Contenido 3</a></li>
+				</div>
+				<button class="accordion">Modelo Fuzzy EER</button>
+				<div class="panel">
+					<li><a class="active" href="#/eer">Introducción</a></li>
+					<li><a href="#">Contenido 2</a></li>
+					<li><a href="#">Contenido 3</a></li>
+				</div>
+			</div>
+			<button class="accordion">Simuladores</button>
+			<div class="panel">
+				<li><a href="#/simulador">Modelo Unificado</a></li>
+				<li><a href="#">Modelo Fuzzy EER</a></li>
+			</div>
+		</ul>
+	</div>
+	<div style="margin-left:20%;margin-top:60px;padding:1px 16px;height:1000px;">
+		<h4>Modelo Fuzzy EER</h4>
+		Permite representar gráficamente las bases de datos difusas. Consideran distintos tipos de atributos y grados difusos.
+	</div>
+	<script>
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+		acc[i].onclick = function(){
+			this.classList.toggle("active");
+			this.nextElementSibling.classList.toggle("show");
+	  }
+	}
+	</script>

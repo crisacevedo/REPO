@@ -1,6 +1,19 @@
 
 app.controller("Simulador1Controller", function($scope, $http, $state,AuthenticationService){
-    
+
+          var username = JSON.parse(localStorage.getItem('username'));
+          var cancionid=0;
+ 
+
+
+
+
+
+
+
+
+
+
    $scope.ObtEvaInfo = 
    {
           ObtEva1elem1:undefined,
@@ -35,16 +48,26 @@ app.controller("Simulador1Controller", function($scope, $http, $state,Authentica
       }
 
 
-
-
-
-
-
-      
-
-
-
-
+     
+$scope.loadsong=function (a){
+    
+    var player=document.getElementById('player');
+    var sourceOgg=document.getElementById('player');
+    var sourceMp3=document.getElementById('player');
+    if (a==1)
+    {
+ sourceMp3.src="audios/Kalimba.mp3";
+   cancionid=a;
+    }
+    if (a==2)
+ {
+ sourceMp3.src="audios/Manu Chao - A Cosa (1).mp3";
+ cancionid=a;
+   
+}
+   player.load(); //just start buffering (preload)
+   player.play(); //start playing
+}
 
       $scope.ObtEva = function (){
       
@@ -57,17 +80,29 @@ app.controller("Simulador1Controller", function($scope, $http, $state,Authentica
         [0,0,0,0,0] , 
         [0,0,0,0,0] , 
         [0,0,0,0,0] , 
-      [0,0,0,0,0] , 
-      [0,0,0,0,0] 
-      ];
+        [0,0,0,0,0] , 
+        [0,0,0,0,0] 
+        ];
          
+
+
+
+
+
+
+
+
+
+
+
+
          arreglo[0][0]= $scope.ObtEvaInfo.ObtEva1elem1;  
          arreglo[0][1]= $scope.ObtEvaInfo.ObtEva1elem2;  
          arreglo[0][2]= $scope.ObtEvaInfo.ObtEva1elem3;  
          arreglo[0][3]= $scope.ObtEvaInfo.ObtEva1elem4;  
          arreglo[0][4]= $scope.ObtEvaInfo.ObtEva1elem5;  
          
-     arreglo[1][0]= $scope.ObtEvaInfo.ObtEva1elem2;  
+         arreglo[1][0]= $scope.ObtEvaInfo.ObtEva1elem2;  
          arreglo[1][1]= $scope.ObtEvaInfo.ObtEva2elem2;  
          arreglo[1][2]= $scope.ObtEvaInfo.ObtEva2elem3;  
          arreglo[1][3]= $scope.ObtEvaInfo.ObtEva2elem4;  
@@ -79,90 +114,120 @@ app.controller("Simulador1Controller", function($scope, $http, $state,Authentica
          arreglo[2][3]= $scope.ObtEvaInfo.ObtEva3elem4;  
          arreglo[2][4]= $scope.ObtEvaInfo.ObtEva3elem5;  
          
-        arreglo[3][0]= $scope.ObtEvaInfo.ObtEva1elem4; 
+         arreglo[3][0]= $scope.ObtEvaInfo.ObtEva1elem4; 
          arreglo[3][1]= $scope.ObtEvaInfo.ObtEva2elem4;  
          arreglo[3][2]= $scope.ObtEvaInfo.ObtEva3elem4;  
          arreglo[3][3]= $scope.ObtEvaInfo.ObtEva4elem4;  
          arreglo[3][4]= $scope.ObtEvaInfo.ObtEva4elem5;  
         
-        arreglo[4][0]= $scope.ObtEvaInfo.ObtEva1elem5; 
+         arreglo[4][0]= $scope.ObtEvaInfo.ObtEva1elem5; 
          arreglo[4][1]= $scope.ObtEvaInfo.ObtEva2elem5;  
          arreglo[4][2]= $scope.ObtEvaInfo.ObtEva3elem5;  
          arreglo[4][3]= $scope.ObtEvaInfo.ObtEva4elem5;  
          arreglo[4][4]= $scope.ObtEvaInfo.ObtEva5elem5;  
+
          
+
+
+
+    var data = {
+      rock_reg: $scope.ObtEvaInfo.ObtEva1elem2,
+      rock_pop: $scope.ObtEvaInfo.ObtEva1elem3,
+      rock_ska: $scope.ObtEvaInfo.ObtEva1elem4,
+      rock_jazz: $scope.ObtEvaInfo.ObtEva1elem5,
+      reg_pop: $scope.ObtEvaInfo.ObtEva2elem3,
+      reg_ska: $scope.ObtEvaInfo.ObtEva2elem4,
+      reg_jazz: $scope.ObtEvaInfo.ObtEva2elem5,
+      pop_ska: $scope.ObtEvaInfo.ObtEva3elem4,
+      pop_jazz: $scope.ObtEvaInfo.ObtEva3elem5,
+      ska_jazz: $scope.ObtEvaInfo.ObtEva4elem5,
+      username:username,
+      cancionid:cancionid
+    }
+   
+
+    $http.post('endpoints/simulador.php', data).success(function(response){
+      console.log(response)
+      $state.go("simulador");
+    }).error(function(error){
+      console.error(error);
+    })
           
-        
+        }
 
 
-         var categoria ="hola";
-         var categoriacomparacion ="hola";
-         var respuesta ="holi";
-         var respuestatotal ="";
-         var categorias = ["Rock", "Reggae", "Pop" ,"Ska ", "Jazz"];        
+      //   var categoria ="hola";
+       //  var categoriacomparacion ="hola";
+        // var respuesta ="holi";
+        // var respuestatotal ="";
+        // var categorias = ["Rock", "Reggae", "Pop" ,"Ska ", "Jazz"];        
 
-         for (var i = 0; i<5; i ++) {
+         //for (var i = 0; i<5; i ++) {
             
-            for (var j = 0; j<5; j ++) {
+           // for (var j = 0; j<5; j ++) {
                
                 
 
-                 if(arreglo[i][j] <=0.5)       
-           {           
+             //    if(arreglo[i][j] <=0.5)       
+           //{           
                   
-                  respuesta="es no semejante a" ;
+             //     respuesta="es no semejante a" ;
                
-            }
+            //}
  
-          if(arreglo[i][j] >0.5 && arreglo[i][j] <=0.6)         
-           {           
+//          if(arreglo[i][j] >0.5 && arreglo[i][j] <=0.6)         
+  //         {           
                   
-                  respuesta="es poco similar a" ;   
+    //              respuesta="es poco similar a" ;   
                
-            }
+      //      }
                 
 
 
 
-                 if(arreglo[i][j]>0.6 && arreglo[i][j] <1)       
-           {           
+        //         if(arreglo[i][j]>0.6 && arreglo[i][j] <1)       
+          // {           
                   
-                  respuesta="es semejante a"    ;
+            //      respuesta="es semejante a"    ;
                
-            }
+            //}
                  
 
 
 
 
-                 if(arreglo[i][j] ==1)       
-           {           
+              //   if(arreglo[i][j] ==1)       
+           //{           
                   
-                  respuesta="es igual a"    ;
+             //     respuesta="es igual a"    ;
                
-            }
+            //}
                  
               
-               categoria=categorias[i];
-               categoriacomparacion=categorias[j]; 
-               respuestatotal= respuestatotal +respuesta+ " " + categoriacomparacion + ",";
+              // categoria=categorias[i];
+               //categoriacomparacion=categorias[j]; 
+               //respuestatotal= respuestatotal +respuesta+ " " + categoriacomparacion + ",";
 
 
-                }
+//                }
 
 
-            respuestatotal= categoria + " " + respuestatotal;
-          window.alert(respuestatotal);
-            respuestatotal="";
-            }
+  //          respuestatotal= categoria + " " + respuestatotal;
+    //      window.alert(respuestatotal);
+      //      respuestatotal="";
+        //    }
   
          
    
 
 
-  }
+  
    
 
+	
+
+   
+   
 var token;
 	if (localStorage['token']){
     token = JSON.parse(localStorage['token']);
@@ -184,35 +249,4 @@ var token;
 			console.error(error);
 		})
 	}
-	
-
-
-
-
-
-
-
-
-
-$scope.logout = function(){
-		var data = {
-			token: token
-		}
-		
-		$http.post('endpoints/logout.php', data).success(function(response){
-			console.log(response)
-			localStorage.clear();
-			$state.go("login");
-		}).error(function(error){
-			console.error(error);
-		})
-	}
-	
-
-
-
-
-
-
-
 })
