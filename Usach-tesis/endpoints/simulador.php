@@ -12,6 +12,7 @@
 	$pop_ska = $data->pop_ska;
 	$pop_jazz = $data->pop_jazz;
     $ska_jazz = $data->ska_jazz;
+<<<<<<< HEAD
     $username=$data->username;
     $cancionid=$data->cancionid;
     $animo=1;
@@ -51,6 +52,11 @@ if (count($verificacion) == 1){
 
 $q = "UPDATE categoria set rock_reg=:rock_reg,rock_pop=:rock_pop,rock_ska=:rock_ska,rock_jazz=:rock_jazz,reg_pop=:reg_pop,reg_ska=:reg_ska,reg_jazz=:reg_jazz,pop_ska=:pop_ska,pop_jazz=:pop_jazz,ska_jazz=:ska_jazz WHERE 	idu='$idu' and idc='$cancionid'";
 
+=======
+    
+    $q = "INSERT INTO categoria (rock_reg, rock_pop, rock_ska, rock_jazz, reg_pop, reg_ska, reg_jazz, pop_ska, pop_jazz, ska_jazz)
+	VALUES (:rock_reg, :rock_pop, :rock_ska, :rock_jazz, :reg_pop, :reg_ska, :reg_jazz, :pop_ska, :pop_jazz, :ska_jazz)";
+>>>>>>> origin/master
     $query = $db->prepare($q);
     $execute = $query->execute(array(
 		":rock_reg" => $rock_reg,
@@ -62,6 +68,7 @@ $q = "UPDATE categoria set rock_reg=:rock_reg,rock_pop=:rock_pop,rock_ska=:rock_
 		":reg_jazz" => $reg_jazz,
 		":pop_ska" => $pop_ska,
 		":pop_jazz" => $pop_jazz,
+<<<<<<< HEAD
 		":ska_jazz" => $ska_jazz
 		));
 	}
@@ -69,4 +76,10 @@ $q = "UPDATE categoria set rock_reg=:rock_reg,rock_pop=:rock_pop,rock_ska=:rock_
 
     echo json_encode($cancionid);
 
+=======
+		":ska_jazz" => $ska_jazz)
+		);
+	
+    //echo json_encode($rock_reg);
+>>>>>>> origin/master
 ?>

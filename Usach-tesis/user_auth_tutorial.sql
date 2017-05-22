@@ -93,6 +93,7 @@ CREATE TABLE `categoria` (
  KEY `idc` (`idc`),
  CONSTRAINT `categoria_ibfk_1` FOREIGN KEY (`idu`) REFERENCES `users` (`userId`),
  CONSTRAINT `categoria_ibfk_2` FOREIGN KEY (`idc`) REFERENCES `cancion` (`id`)
+<<<<<<< HEAD
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin
 
 
@@ -105,3 +106,6 @@ INSERT INTO `cancion` (`id`, `nombre`, `artista`, `ruta`) VALUES (NULL, 'cancion
 
 
 
+=======
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin
+>>>>>>> origin/master

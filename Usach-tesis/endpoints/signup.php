@@ -26,7 +26,11 @@
     $query = $db->prepare($q);
     $execute = $query->execute(array(
         ":email" => $username,
+<<<<<<< HEAD
         ":password" => ($password)
+=======
+        ":password" => sha1($password)
+>>>>>>> origin/master
         
     ));
 
