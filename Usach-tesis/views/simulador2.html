@@ -92,6 +92,12 @@
 </table>
 
 
+<div>
+    <button ng-click="dibujar(1)"> dibujar </button>
+</div>
+
+
+
 </div>
 
 
@@ -129,6 +135,7 @@ function submitMyForm( form_id )
 
 
   </div>
+
   <script>
   var acc = document.getElementsByClassName("accordion");
   var i;
@@ -244,14 +251,16 @@ $(document).ready(function(){
     });
 });
 
-
-
-
-
-
-
   </script>
 
 
-
-
+<script>  
+function dibujar(a)
+{
+var canvas = new fabric.Canvas('canvas');
+canvas.add(new fabric.Circle({ radius: 30, fill: '#f55', top: 100, left: 100 }));
+canvas.selectionColor = 'rgba(0,255,0,0.3)';
+canvas.selectionBorderColor = 'red';
+canvas.selectionLineWidth = 5;
+}
+</script>
