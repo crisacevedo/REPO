@@ -43,12 +43,9 @@ app.controller("LoginController", function($scope, $http, $state,AuthenticationS
         $http.post("endpoints/login.php", data).success(function(response){
             console.log(response);
             localStorage.setItem("token", JSON.stringify(response));
-<<<<<<< HEAD
             localStorage.setItem("username", JSON.stringify($scope.loginInfo.username));
           
             
-=======
->>>>>>> origin/master
             $state.go("application");
         }).error(function(error){
             console.error(error);

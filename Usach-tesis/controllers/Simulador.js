@@ -48,7 +48,6 @@ app.controller("Simulador1Controller", function($scope, $http, $state,Authentica
       }
 
 
-<<<<<<< HEAD
      
 $scope.loadsong=function (a){
     
@@ -69,9 +68,6 @@ $scope.loadsong=function (a){
    player.load(); //just start buffering (preload)
    player.play(); //start playing
 }
-=======
-
->>>>>>> origin/master
 
       $scope.ObtEva = function (){
       
@@ -253,39 +249,4 @@ var token;
 			console.error(error);
 		})
 	}
-<<<<<<< HEAD
-=======
-	
-
-
-	$scope.simulador = function(){
-		var data = {
-			rock_reg: $scope.ObtEvaInfo.ObtEva1elem2,
-			rock_pop: $scope.ObtEvaInfo.ObtEva1elem3,
-			rock_ska: $scope.ObtEvaInfo.ObtEva1elem4,
-			rock_jazz: $scope.ObtEvaInfo.ObtEva1elem5,
-			reg_pop: $scope.ObtEvaInfo.ObtEva2elem3,
-			reg_ska: $scope.ObtEvaInfo.ObtEva2elem4,
-			reg_jazz: $scope.ObtEvaInfo.ObtEva2elem5,
-			pop_ska: $scope.ObtEvaInfo.ObtEva3elem4,
-			pop_jazz: $scope.ObtEvaInfo.ObtEva3elem5,
-			ska_jazz: $scope.ObtEvaInfo.ObtEva4elem5
-		}
-		
-		$http.post('endpoints/simulador.php', data).success(function(response){
-			console.log(response)
-			localStorage.setItem("token", JSON.stringify(response));
-			$state.go("simulador", result);
-		}).error(function(error){
-			console.error(error);
-		})
-	}
-
-
-
-
-
-
-
->>>>>>> origin/master
 })
