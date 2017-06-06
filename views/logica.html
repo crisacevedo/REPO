@@ -1,67 +1,126 @@
+<div class="wrapper">
+	<div class="sidebar" data-background-color="white" data-active-color="danger">
 
+    <!--
+		Tip 1: you can change the color of the sidebar's background using: data-background-color="white | black"
+		Tip 2: you can change the color of the active button using the data-active-color="primary | info | success | warning | danger"
+	-->
 
-    <nav class="navbar navbar-default custom-header">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button><a class="navbar-brand navbar-link" href="#">Nombre<span>sitio </span> </a></div>
-            <div class="collapse navbar-collapse" id="navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#"> <span class="caret"></span><img src="css/assets/img/avatar.jpg"class="dropdown-image"></a>
-                        <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                            <li><a href="#/cambioclave">Configuración </a></li>
-                            <li class="active"><a <a ng-click="logout()">logout</a> </a></li>
-
-                        </ul>
-                    </li>
-                </ul>
+    	<div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="#/app" class="simple-text">
+                    Nombre Sitio
+                </a>
             </div>
-        </div>
-    </nav>
-	<div>
-		<ul class="bar">
-			<li><a href="#/app">Página Principal</a></li>
-			<button class="accordion">Tutoriales</button>
-			<div class="panel">
-				<button class="accordion">Lógica y Conjuntos Difusos</button>
-				<div class="panel">
-					<li><a class="active" href="#/logica">Lógica Difusa</a></li>
-					<li><a href="#/conjuntos">Conjuntos Difusos</a></li>
-					<li><a href="#">Contenido 3</a></li>
-				</div>
-				<button class="accordion">Modelos Relacionales Difusos</button>
-				<div class="panel">
-					<li><a href="#/modelos">Introducción</a></li>
-					<li><a href="#/unificado">Modelo Unificado</a></li>
-					<li><a href="#">Contenido 3</a></li>
-				</div>
-				<button class="accordion">Modelo Fuzzy EER</button>
-				<div class="panel">
-					<li><a href="#/eer">Introducción</a></li>
-					<li><a href="#">Contenido 2</a></li>
-					<li><a href="#">Contenido 3</a></li>
-				</div>
-			</div>
-			<button class="accordion">Simuladores</button>
-			<div class="panel">
-				<li><a href="#/simulador">Modelo Unificado</a></li>
-				<li><a href="#">Modelo Fuzzy EER</a></li>
-			</div>
-		</ul>
-	</div>
-	<div style="margin-left:20%;margin-top:60px;padding:1px 16px;height:1000px;">
-		<h4>Información Difusa</h4>
-		Es un conjunto organizado de datos los cuales son poco claros o imprecisos.
-		<br><br>
-		<h4>Lógica Difusa</h4>
-		Entrega las herramientas necesarias para manipular la información difusa.
-		Añade un valor de verdad intermedio “quizás” a los ya establecidos “verdadero” y “falso”.
-	</div>
+            <ul class="nav">
+                <li>
+                    <a href="#/app">
+                        <i class="ti-home"></i>
+                        <p>Inicio</p>
+                    </a>
+                </li>
+				<li class="active">
+                    <a class="accordion">
+                        <i class="ti-align-left"></i>
+                        <p>Tutoriales <b class="caret"></b></p>
+                    </a>
+					<div class="panel">
+						<ul class="nav">
+							<a class="accordion">
+								<p>Lógica y Conjuntos Difusos <b class="caret"></b></p>
+							</a>
+							<div class="panel">
+								<ul class="nav">
+									<li class="active"><a href="#/logica">Lógica Difusa</a></li>
+									<li><a href="#/conjuntos">Conjuntos Difusos</a></li>
+									<li><a href="#">Contenido 3</a></li>
+								</ul>
+							</div>
+							<a class="accordion">
+								<p>Modelos Relacionales Difusos <b class="caret"></b></p>
+							</a>
+							<div class="panel">
+								<ul class="nav">
+									<li><a href="#/modelos">Introducción</a></li>
+									<li><a href="#/unificado">Modelo Unificado</a></li>
+									<li><a href="#">Contenido 3</a></li>
+								</ul>
+							</div>
+							<a class="accordion">
+								<p>Modelo Fuzzy EER <b class="caret"></b></p>
+							</a>
+							<div class="panel">
+								<ul class="nav">
+									<li><a href="#/eer">Introducción</a></li>
+									<li><a href="#">Contenido 2</a></li>
+									<li><a href="#">Contenido 3</a></li>
+								</ul>
+							</div>
+						</ul>
+					</div>
+                </li>
+				<li>
+                    <a class="accordion">
+						<i class="ti-vector"></i>
+						<p>Simuladores <b class="caret"></b></p>
+					</a>
+					<div class="panel">
+						<ul class="nav">
+							<li><a href="#/simulador">Modelo Unificado</a></li>
+							<li><a href="#/simulador2">Modelo Fuzzy EER</a></li>
+						</ul>
+					</div>
+				</li>
+            </ul>
+    	</div>
+    </div>
+	
+    <div class="main-panel">
+		<nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar bar1"></span>
+                        <span class="icon-bar bar2"></span>
+                        <span class="icon-bar bar3"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Navegación</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="ti-settings"></i>
+									<p>Herramientas</p>
+									<b class="caret"></b>
+                              </a>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Administración</a></li>
+                                <li><a href="#">Reportes</a></li>
+                              </ul>
+                        </li>
+						<li>
+                            <a ng-click="logout()" href="#">
+                                <i class="ti-panel"></i>
+								<p>Salir</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+		<div style="margin-left:2%">
+			<h4>Información Difusa</h4>
+			Es un conjunto organizado de datos los cuales son poco claros o imprecisos.
+			<br><br>
+			<h4>Lógica Difusa</h4>
+			Entrega las herramientas necesarias para manipular la información difusa.
+			Añade un valor de verdad intermedio “quizás” a los ya establecidos “verdadero” y “falso”.
+		</div>
+    </div>
+</div>
+
 	<script>
 	var acc = document.getElementsByClassName("accordion");
 	var i;

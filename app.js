@@ -29,15 +29,12 @@ app.config(function($stateProvider, $urlRouterProvider){
 		params: {'test': null}
 		})
 
-
-
 		.state("simulador2", {
 		url:"/simulador2",
 		controller: "Simulador2Controller",
 		templateUrl: "views/simulador2.html",
 		params: {'test': null}
 		})
-
 
 		.state("eer", {
 		url:"/eer",
@@ -73,5 +70,6 @@ app.config(function($stateProvider, $urlRouterProvider){
 		templateUrl: "views/unificado.html",
 		params: {'test': null}
 		})
+		
 })
 
