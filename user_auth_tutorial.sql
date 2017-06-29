@@ -101,7 +101,7 @@ INSERT INTO `cancion` (`id`, `nombre`, `artista`, `ruta`) VALUES (NULL, 'cancion
 
 INSERT INTO `cancion` (`id`, `nombre`, `artista`, `ruta`) VALUES (NULL, 'cancion 2', 'Manu chao ', 'C:\\xampp\\htdocs\\Usach-tesis-\\audios\\Manu Chao - A Cosa (1).mp3.mp3');
 
-
+select avg(rock_reg) rock_reg,avg(rock_pop) rock_pop ,avg(rock_ska) rock_ska,avg(rock_jazz) rock_jazz,avg(reg_pop) reg_pop,avg(reg_ska) reg_ska,avg(reg_jazz) reg_jazz,avg(pop_ska) pop_ska,avg(pop_jazz) pop_jazz,avg(ska_jazz) ska_jazz from categoria
 
 
 
